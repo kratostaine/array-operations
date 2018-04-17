@@ -1,4 +1,4 @@
-package com.project.arraySumCombination;
+package com.project.arrayCombination;
 
 import static org.junit.Assert.assertEquals;
 
@@ -9,7 +9,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class ArraySumTest {
+public class ArraySumWithMapTest {
 	
 	private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
@@ -27,8 +27,8 @@ public class ArraySumTest {
 	public void findSumArrayWithPositiveIntegers() {
 		int[] array = {10,2,6,2,10,5,9,1,7};
 		int sum=10;
-		ArraySum.findSumArray(array, sum);
-		String expectedOutput = "[10]\n[2, 6, 2]\n[10]\n[9, 1]\n";
+		ArraySumWithMap.showArrayCombination(array, sum);
+		String expectedOutput = "[ 10 ]\n[ 2 6 2 ]\n[ 10 ]\n[ 9 1 ]\n";
 		assertEquals(expectedOutput, outContent.toString());
 	}
 	
@@ -36,8 +36,8 @@ public class ArraySumTest {
 	public void findSumArrayWithNegativeIntegers() {
 		int[] array = {2,-4,9,18,-18,27,3,8,1};
 		int sum=9;
-		ArraySum.findSumArray(array, sum);
-		String expectedOutput = "[9]\n[9, 18, -18]\n[-18, 27]\n[8, 1]\n";
+		ArraySumWithMap.showArrayCombination(array, sum);
+		String expectedOutput = "[ 9 ]\n[ 9 18 -18 ]\n[ -18 27 ]\n[ 8 1 ]\n";
 		assertEquals(expectedOutput, outContent.toString());
 	}
 	
@@ -45,7 +45,7 @@ public class ArraySumTest {
 	public void findSumArrayWithNoMatches() {
 		int[] array = {1,6,4,6};
 		int sum=9;
-		ArraySum.findSumArray(array, sum);
+		ArraySumWithMap.showArrayCombination(array, sum);
 		String expectedOutput = "No matches found";
 		assertEquals(expectedOutput, outContent.toString());
 	}

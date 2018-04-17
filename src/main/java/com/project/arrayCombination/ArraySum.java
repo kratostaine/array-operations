@@ -1,4 +1,4 @@
-package com.project.arraySumCombination;
+package com.project.arrayCombination;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,12 +9,12 @@ public class ArraySum {
 	static void findSumArray(int[] array, int sum) {
 		int result=-1;
 		for(int i=0;i<array.length;i++) {
-			int arraySum=0;
+			int currentSum=0;
 			List<Integer> subArray = new ArrayList<Integer>();
 			for(int j=i;j<array.length;j++) {
-				arraySum+=array[j];
+				currentSum+=array[j];
 				subArray.add(array[j]);
-				if(arraySum==sum) {
+				if(currentSum==sum) {
 					printArray(subArray);
 					result+=1;
 				}

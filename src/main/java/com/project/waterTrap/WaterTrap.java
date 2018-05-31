@@ -15,12 +15,11 @@ public class WaterTrap {
 				else
 					result += lMax - towers[lIndex];
 				lIndex++;
-			}
-			else {
-				if(towers[rIndex]>rMax)
+			} else {
+				if (towers[rIndex] > rMax)
 					rMax = towers[rIndex];
 				else
-					result+= rMax - towers[rIndex];
+					result += rMax - towers[rIndex];
 				rIndex--;
 			}
 		}
